@@ -160,7 +160,7 @@
         }
 
         h1 {
-            font-size: 20px;
+            font-size: 22px;
             text-align: center;
             margin-bottom: 18px;
             letter-spacing: -0.3px;
@@ -168,11 +168,11 @@
         }
 
         h2 {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 18px;
             color: #000000;
         }
 
@@ -332,8 +332,8 @@
 
         /* MOBILE OPTIMISATION — NO OVERLAP, TOUCH-FRIENDLY */
         @media (max-width: 600px) {
-            h1 { font-size: 19px; }
-            h2 { font-size: 17px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 18px; }
             h3 { font-size: 16px; }
             p { font-size: 16px; }
             .required-link, .demo-link { font-size: 16px; padding: 12px 14px; }
@@ -426,6 +426,10 @@
             <p><strong>50-Word Explanation:</strong><br>
             This isiZulu phrase encapsulates <em>ubuntu</em>—a core concept in cultural psychology where healing is relational. English translation loses the nuance: "chosen spaces" implies agency, but "kuyathanda" (it brings love) conveys communal emotional safety absent in Western clinical models. My psychology studies highlight how collectivist cultures frame mental health through interdependence, not individual pathology.</p>
             <p><em>Note: For submission, the GenAI image would be included as a file (e.g., "MentalHealth_Youth.png"). The mock image description above is based on actual AI-generated outputs using tools like Midjourney or DALL-E with the refined prompt.</em></p>
+            
+            <!-- Added the image here -->
+            <h3 style="margin-top: 25px; color: #003366; font-weight: bold; font-size: 18px;">GenAI Image Example</h3>
+            <img src="https://github.com/oeybers-cpu/all_125_as2_b/blob/main/psych_demo.png?raw=true" alt="Mental Health Demo Image" style="width: 100%; max-width: 500px; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px;">
         </div>
 
         <div id="writing" class="section">
@@ -477,18 +481,58 @@
             <p><strong>Submission:</strong> Online via clickUP (Turnitin-enabled)</p>
         </div>
 
-        <!-- NOTE-TAKING FIELD -->
-        <div id="notes" class="section">
-            <h2>📝 TAKE NOTES HERE (SAVE AS .TXT)</h2>
-            <p class="note-label">Copy and paste your draft reflections, article summaries, or critical thoughts below. When ready, tap "Save Notes" to download as a .txt file.</p>
-            <textarea id="notesField" class="note-field-container" placeholder="Start typing your notes here..."></textarea>
-            <button onclick="saveNotes()" style="display:block; margin:12px auto; padding:12px 20px; background:#003366; color:white; border:none; border-radius:6px; font-family:'Times New Roman', Times, serif; font-size:16px; cursor:pointer;">💾 Save Notes as .txt</button>
-            <p class="note-footer">💡 Tip: Copy/paste/save important notes. This field saves locally — no login needed.</p>
+        <!-- Essay Notes Section -->
+        <div id="essay-notes" class="section">
+            <h2>📝 YOUR ESSAY DRAFT</h2>
+            <p class="note-label">Guiding Questions:</p>
+            <ul>
+                <li>What is the main argument of your chosen text, and how does it connect to your academic discipline?</li>
+                <li>How does your personal experience or cultural background shape your understanding of this text?</li>
+            </ul>
+            <textarea id="essayNotesField" class="note-field-container" placeholder="Start drafting your essay here..."></textarea>
+            <button onclick="saveEssayNotes()" style="display:block; margin:12px auto; padding:12px 20px; background:#003366; color:white; border:none; border-radius:6px; font-family:'Times New Roman', Times, serif; font-size:16px; cursor:pointer;">💾 Save Essay Notes as .txt</button>
+        </div>
+
+        <!-- GenAI Image Notes Section -->
+        <div id="genai-notes" class="section">
+            <h2>🎨 GENAI IMAGE PROMPTS</h2>
+            <p class="note-label">Guiding Questions:</p>
+            <ul>
+                <li>What visual elements best represent the core theme or message of your chosen text?</li>
+                <li>How can you refine your prompt to better capture the cultural or emotional aspects you want to convey?</li>
+            </ul>
+            <textarea id="genaiNotesField" class="note-field-container" placeholder="Type your GenAI image prompts and refinements here..."></textarea>
+            <button onclick="saveGenAINotes()" style="display:block; margin:12px auto; padding:12px 20px; background:#003366; color:white; border:none; border-radius:6px; font-family:'Times New Roman', Times, serif; font-size:16px; cursor:pointer;">💾 Save Image Prompts as .txt</button>
+        </div>
+
+        <!-- Translanguaging Notes Section -->
+        <div id="translanguaging-notes" class="section">
+            <h2>🌍 TRANSLANGUAGING COMPONENT</h2>
+            <p class="note-label">Guiding Questions:</p>
+            <ul>
+                <li>What sentence in your primary language best captures an idea that English cannot fully express?</li>
+                <li>How does this sentence add depth or nuance to your understanding of the topic?</li>
+            </ul>
+            <textarea id="translanguagingNotesField" class="note-field-container" placeholder="Write your translanguaging sentence here..."></textarea>
+            <button onclick="saveTranslanguagingNotes()" style="display:block; margin:12px auto; padding:12px 20px; background:#003366; color:white; border:none; border-radius:6px; font-family:'Times New Roman', Times, serif; font-size:16px; cursor:pointer;">💾 Save Translanguaging Notes as .txt</button>
+        </div>
+
+        <!-- AI Use Statement Notes Section -->
+        <div id="ai-notes" class="section">
+            <h2>🤖 AI USE STATEMENT</h2>
+            <p class="note-label">Guiding Questions:</p>
+            <ul>
+                <li>How did you use AI to brainstorm, edit, or refine your work?</li>
+                <li>What parts of your work did you do yourself versus what AI helped with?</li>
+            </ul>
+            <textarea id="aiNotesField" class="note-field-container" placeholder="Document your AI usage here..."></textarea>
+            <button onclick="saveAINotes()" style="display:block; margin:12px auto; padding:12px 20px; background:#003366; color:white; border:none; border-radius:6px; font-family:'Times New Roman', Times, serif; font-size:16px; cursor:pointer;">💾 Save AI Statement as .txt</button>
         </div>
 
         <script>
-            function saveNotes() {
-                const notes = document.getElementById('notesField').value;
+            // Save Essay Notes
+            function saveEssayNotes() {
+                const notes = document.getElementById('essayNotesField').value;
                 if (!notes.trim()) {
                     alert("No notes to save. Please type something first.");
                     return;
@@ -497,24 +541,99 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'ALL125_Assignment2_Notes.txt';
+                a.download = 'ALL125_Essay_Notes.txt';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
-                alert("Notes saved as 'ALL125_Assignment2_Notes.txt' on your device.");
+                alert("Essay notes saved as 'ALL125_Essay_Notes.txt' on your device.");
+            }
+
+            // Save GenAI Image Notes
+            function saveGenAINotes() {
+                const notes = document.getElementById('genaiNotesField').value;
+                if (!notes.trim()) {
+                    alert("No notes to save. Please type something first.");
+                    return;
+                }
+                const blob = new Blob([notes], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ALL125_GenAI_Prompts.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                alert("GenAI image prompts saved as 'ALL125_GenAI_Prompts.txt' on your device.");
+            }
+
+            // Save Translanguaging Notes
+            function saveTranslanguagingNotes() {
+                const notes = document.getElementById('translanguagingNotesField').value;
+                if (!notes.trim()) {
+                    alert("No notes to save. Please type something first.");
+                    return;
+                }
+                const blob = new Blob([notes], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ALL125_Translanguaging_Notes.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                alert("Translanguaging notes saved as 'ALL125_Translanguaging_Notes.txt' on your device.");
+            }
+
+            // Save AI Use Statement Notes
+            function saveAINotes() {
+                const notes = document.getElementById('aiNotesField').value;
+                if (!notes.trim()) {
+                    alert("No notes to save. Please type something first.");
+                    return;
+                }
+                const blob = new Blob([notes], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ALL125_AI_Use_Statement.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                alert("AI use statement saved as 'ALL125_AI_Use_Statement.txt' on your device.");
             }
 
             // Auto-save notes every 30 seconds
             setInterval(() => {
-                localStorage.setItem('all125_notes', document.getElementById('notesField').value);
+                localStorage.setItem('all125_essay_notes', document.getElementById('essayNotesField').value);
+                localStorage.setItem('all125_genai_notes', document.getElementById('genaiNotesField').value);
+                localStorage.setItem('all125_translanguaging_notes', document.getElementById('translanguagingNotesField').value);
+                localStorage.setItem('all125_ai_notes', document.getElementById('aiNotesField').value);
             }, 30000);
 
             // Load saved notes on page load
             window.addEventListener('load', () => {
-                const saved = localStorage.getItem('all125_notes');
-                if (saved) {
-                    document.getElementById('notesField').value = saved;
+                const savedEssay = localStorage.getItem('all125_essay_notes');
+                if (savedEssay) {
+                    document.getElementById('essayNotesField').value = savedEssay;
+                }
+                
+                const savedGenai = localStorage.getItem('all125_genai_notes');
+                if (savedGenai) {
+                    document.getElementById('genaiNotesField').value = savedGenai;
+                }
+                
+                const savedTranslanguaging = localStorage.getItem('all125_translanguaging_notes');
+                if (savedTranslanguaging) {
+                    document.getElementById('translanguagingNotesField').value = savedTranslanguaging;
+                }
+                
+                const savedAI = localStorage.getItem('all125_ai_notes');
+                if (savedAI) {
+                    document.getElementById('aiNotesField').value = savedAI;
                 }
             });
 
