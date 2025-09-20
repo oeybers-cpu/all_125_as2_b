@@ -29,7 +29,7 @@
                     "type": "image/png"
                 },
                 {
-                    "src": "image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAhCAYAAAD3578cAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAApklEQVR42u3WsQ0AIQwDwS7/9xYq5iRZb+1tOvUzNlLc3Ks4gF5e6M6H58V3n4f3r+869537yf2a56679597P82795P7x32f5937yf3kfs1z1937z72f5t37yf3jvs/z7v3kfnK/5rnrbv3n3k9zP7nf89x19/5z76e5n9zvee66e/+599PcT+7XHPdvf/c+2nuJ/d7nrvu3n/u/TT3k/s9z1137z/3fpr7yf2e56679597P8395H7PM9fd+8+9n+Z+cr/muevu/efeT3M/ud/z3HX3/nPvp7mf3O957rp7/7n309xP7vc8d929/9z7ae4n93ueu+7ef+79NPf/277P99/8AgB081Z1xjJ0AAAAAElFTkSuQmCC",
+                    "src": "image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAhCAYAAAD3578cAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAApklEQVR42u3WsQ0AIQwDwS7/9xYq5iRZb+1tOvUzNlLc3Ks4gF5e6M6H58V3n4f3r+869537yf2a56679597P82795P7x32f5937yf3kfs1z1937z72f5t37yf3jvs/z7v3kfnK/5rnrbv3n3k9zP7nf89x19/5z76e5n9zvee66e/+599PcT+7XHPdvf/c+2nuJ/d7nrvu3n/u/TT3k/s9z1137z/3fpr7yf2e56679597P8395H7PM9fd+8+9n+Z+cr/muevu/efeT3M/ud/z3HX3/nPvp7mf3O957lp7/7n309xP7vc8d929/9z7ae4n93ueu+7ef+79NPf/277P99/8AgB081Z1xjJ0AAAAAElFTkSuQmCC",
                     "sizes": "96x96",
                     "type": "image/png"
                 },
@@ -330,6 +330,17 @@
             line-height: 1.4;
         }
 
+        /* Image styling for consistency */
+        .demo-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         /* MOBILE OPTIMISATION — NO OVERLAP, TOUCH-FRIENDLY */
         @media (max-width: 600px) {
             h1 { font-size: 20px; }
@@ -346,6 +357,7 @@
             .menu-btn { font-size: 22px; }
             .nav-menu { top: 45px; }
             .nav-menu a { padding: 12px 15px; font-size: 15px; }
+            .demo-image { max-width: 90%; }
         }
     </style>
 </head>
@@ -442,7 +454,8 @@
             <p><em>Original Translanguaging Sentence:</em> "Opgee is nie 'n opsie met kennis rondom ons nie. / To give up is not an option with knowledge around us."</p>
             <p><em>How to use in presentation:</em> During the section on community-based solutions, one team member could share the isiZulu phrase and its meaning, explaining how this concept of "knowledge around us" and not give up is central to academic approaches to mental health. This creates a powerful moment of resilience in higher education and adds depth to the presentation.</p>
             
-           <img src="https://github.com/oeybers-cpu/all_125_as2_b/blob/main/psych_demo.png?raw=true" alt="Psychology Demonstration Image" style="display: block; margin: 20px auto; width: 40%; height: auto;">  <p><em>How to use in presentation:</em> This image could be used as a visual anchor throughout the presentation. It could appear during the introduction to set the tone, then be referenced during each key argument section to show how different elements of the image connect to your points (e.g., the "glowing support networks" connecting to community solutions, the "cracks mended with golden light" connecting to healing processes).</p>
+           <img src="https://github.com/oeybers-cpu/all_125_as2_b/blob/main/psych_demo.png?raw=true" alt="Psychology Demonstration Image" class="demo-image">  
+           <p><em>How to use in presentation:</em> This image could be used as a visual anchor throughout the presentation. It could appear during the introduction to set the tone, then be referenced during each key argument section to show how different elements of the image connect to your points (e.g., the "glowing support networks" connecting to community solutions, the "cracks mended with golden light" connecting to healing processes).</p>
         </div>
 
         <div id="structure" class="section">
@@ -523,10 +536,11 @@
             
             <h3>Visual Aids</h3>
             <ul>
-                <img src="https://www.statssa.gov.za/wp-content/uploads/2019/05/Youthdatastorygraph.jpg" 
-     alt="Youth Data Story Graph" 
-     style="display: block; margin: 20px auto; width: 25%; height: auto;">
-
+                <li style="list-style-type: none;">
+                    <img src="https://www.statssa.gov.za/wp-content/uploads/2019/05/Youthdatastorygraph.jpg" 
+                         alt="Youth Data Story Graph" 
+                         class="demo-image">
+                </li>
                 <li><strong>Keep slides simple:</strong> No more than 6 words per line, 6 lines per slide</li>
                 <li><strong>Use high-quality images:</strong> Avoid clip art and low-resolution photos</li>
                 <li><strong>Consistent design:</strong> Use the same font, color scheme, and layout throughout</li>
